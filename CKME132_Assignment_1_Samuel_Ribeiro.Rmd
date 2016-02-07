@@ -1,0 +1,150 @@
+---
+title: "CKME132 Assignment 1"
+author: "Samuel Ribeiro"
+date: "February 1, 2016"
+output: html_document
+---
+
+Question 1
+------------------------------------------------------
+Part a)
+```{r}
+v1 <- c(1:20,19:1)
+v1
+```
+
+Part b)
+```{r}
+vnm <- c(5,7,9)
+vnm
+```
+
+Part c)
+```{r}
+x <- c(6,4,2)
+y <- rep(x,8)
+y
+```
+
+Part d)
+```{r}
+x <- c(6,4,2)
+y <- rep_len(x,28)
+y
+```
+
+Part e)
+```{r}
+a <- rep.int(6,10)
+b <- rep.int(4,20)
+c <- rep.int(2,30)
+x <- c(a,b,c)
+x
+```
+
+Question 2
+------------------------------------------------------
+Part a)
+```{r}
+n <- c(1:100)
+v <- n^2 + 5*n^3
+v
+```
+
+Part b)
+```{r}
+n <- c(10:30)
+v <- (2^n/n + 3^n/n^3)
+v
+```
+
+Question 3
+---------------------------------------------------------
+- Setup initial vectors
+```{r}
+set.seed(50)
+xVec <- sample(0:999 , 250 , replace=T)
+yVec <- sample(0:999 , 250 , replace=T)
+xVec
+yVec
+```
+
+- Part a)
+```{r}
+YVecMod <- yVec[2:250]
+x <- YVecMod - xVec
+x
+```
+
+- Part b)
+```{r}
+xVec2 <- xVec[2:250]
+xVec3 <- xVec[3:250]
+xVecB <- xVec + 2*xVec2 - xVec3
+xVecB
+```
+
+- Part c)
+```{r}
+yVec2 <- yVec[yVec > 600]
+yVec2
+```
+
+- Part d)
+```{r}
+yVec3 <- which(yVec > 600)
+yVec3
+```
+
+- Part e)
+```{r}
+xVec4 <- xVec[yVec3]
+xVec4
+```
+
+- Part f)
+```{r}
+z <- sum(xVec%%2 == 0)
+z
+```
+
+- Part g)
+```{r}
+xVecSort <- xVec[order(yVec)]
+xVecSort
+```
+
+
+Question 4
+------------------------------------------------------
+Part a)
+```{r}
+A <- matrix(c(1,5,-2,1,2,-1,3,6,-3),3,3)
+A%*%A%*%A
+```
+
+Part b)
+```{r}
+A[,3] <- A[,1]+A[,2]
+A
+```
+
+Part c)
+```{r}
+determinant(A)
+```
+
+Part d)
+```{r}
+#solve(A)
+```
+
+Question 5
+----------------------------------------------------
+#Part a) Continuous
+#Part b) Continous
+#Part c) Discrete
+#Part d) Continuous
+
+
+
